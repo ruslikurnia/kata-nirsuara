@@ -34,3 +34,15 @@ document.addEventListener("click", function (e) {
     navbarNav.classList.remove("active");
   }
 });
+
+// Dark Mode Toggle
+const darkModeToggle = document.querySelector("#dark-mode");
+darkModeToggle.addEventListener("click", (e) => {
+  document.documentElement.classList.toggle("dark-mode");
+  e.preventDefault();
+  if (document.documentElement.classList.contains("dark-mode")) {
+    darkModeToggle.querySelector("box-icon").setAttribute("name", "sun");
+  } else {
+    darkModeToggle.querySelector("box-icon").setAttribute("name", "moon");
+  }
+});
